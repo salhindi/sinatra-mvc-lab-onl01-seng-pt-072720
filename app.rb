@@ -10,7 +10,7 @@ class App < Sinatra::Base
   
   post '/piglatinize' do 
     sentence = PigLatinzer.new 
-    @piglatinzed = sentence.piglatinize(params[:user_phrase])
+    @piglatinzed = sentence.piglatinize_word(params[:user_phrase])
   
   
     erb :piglatinize
