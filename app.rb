@@ -10,12 +10,13 @@ class App < Sinatra::Base
   
   
   post '/piglatinize' do 
-    sentence = PigLatinzer.new 
+    sentence = PigLatinzer.new
+    binding.pry
     @piglatinzed = sentence.piglatinize(params[:user_phrase])
 
   
     erb :piglatinize
-    binding.pry
+    
   end
   
 end
